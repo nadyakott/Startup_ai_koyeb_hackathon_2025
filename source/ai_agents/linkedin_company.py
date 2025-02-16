@@ -34,7 +34,7 @@ def fetch_company(company_link):
     json_data = json.dumps(response)
     return json_data
 
-if __name__ == '__main__':
-    company_link = 'https://www.linkedin.com/company/ex-corp/'
-    res = fetch_company(company_link)
-    print(res)
+# if __name__ == '__main__':
+#     company_link = 'https://www.linkedin.com/company/ex-corp/'
+#     res = fetch_company(company_link)
+#     print(res)

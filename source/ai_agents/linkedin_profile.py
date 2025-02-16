@@ -1,6 +1,5 @@
 import requests
-from agent_base import agent, linkedin
-from source.ResponseSchemas.linkedin_profile_schema import LinkedInAnalysis
+from source.ai_agents.agent_base import agent, linkedin
 import json
 
 questions = [
@@ -18,6 +17,7 @@ def fetch_founder_profile(founder_link):
        
        Return the following schema:
        class LinkedInAnalysis(BaseModel):
+            name: str
             years_of_industry_experience: conint(ge=0)
             reputable_companies: str
             leadership_roles: conint(ge=0)
@@ -27,9 +27,9 @@ def fetch_founder_profile(founder_link):
 
     response = agent.run(prompt)
     json_data = json.dumps(response)
-    return json_data
+    return json.loads(linkedin_data), response
 
-if __name__ == '__main__':
-    fetch_founder_profile(founder_link="https://www.linkedin.com/in/sunnymay/")
+# if __name__ == '__main__':
+#     fetch_founder_profile(founder_link="https://www.linkedin.com/in/sunnymay/")
 
 # res = agent.run(f"Based on {founder_data}, answer the questions: {questions}.")

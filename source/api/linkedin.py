@@ -4,7 +4,7 @@ class LinkedInAPI:
 	def __init__(self):
 		self.profile_api = 'https://fresh-linkedin-profile-data.p.rapidapi.com/get-linkedin-profile-by-salesnavurl'
 		self.company_api = 'https://fresh-linkedin-profile-data.p.rapidapi.com/get-company-by-linkedinurl'
-		self.auth = "6c408a89a8mshc72f172ed737c94p14a60ejsn073b4e8765eb"
+		self.auth = "ae03c42fe6mshfa74616e3664c5cp1cbfbejsned144b97d03d"
 
 		self.headers = {
 			"x-rapidapi-key": self.auth,
