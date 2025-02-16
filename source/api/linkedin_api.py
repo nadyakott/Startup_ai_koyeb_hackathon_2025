@@ -60,8 +60,8 @@ agent = CodeAgent(tools=[search_tool], model=litellm_model)
 
 # res = agent.run(f"Based on {founder_data}, answer the questions: {questions}.")
 
-res = agent.run(f"Can you tell me about company cs.money")
-print(res)
+# res = agent.run(f"Can you tell me about company cs.money")
+# print(res)
 
 #
 # 	def retrive_founder_info(self):

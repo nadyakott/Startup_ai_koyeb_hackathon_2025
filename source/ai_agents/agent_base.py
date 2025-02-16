@@ -3,6 +3,9 @@ from smolagents import Tool, CodeAgent, LiteLLMModel, DuckDuckGoSearchTool
 # from langchain_community.tools import DuckDuckGoSearchTool
 import os
 
+from source.api.linkedin_api import LinkedInAPI
+
+linkedin = LinkedInAPI()
 search_tool = DuckDuckGoSearchTool()
 
 os.environ["ANTHROPIC_API_KEY"] = os.getenv("ANTHROPIC_API_KEY")
